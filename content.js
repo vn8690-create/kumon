@@ -1,6 +1,7 @@
+import {alignTextbook} from './textbook.js';
 // Original lesson content. Sequence is adaptable to the child's textbook.
 const chapter=(grade,id,title,jp,items)=>({grade,id,title,jp,lessons:items.map(([key,title,jp])=>({id:key,title,jp}))});
-export const chapters=[
+const draftChapters=[
 chapter(5,'decimal','Số nguyên và số thập phân','整数と小数', [['place','Giá trị hàng và dịch dấu phẩy','位取り'],['decimal-mul','Nhân số thập phân','小数のかけ算'],['decimal-div','Chia số thập phân','小数のわり算']]),
 chapter(5,'shape','Hình học và góc','図形と角',[['congruent','Hai hình bằng nhau','合同な図形'],['angle','Tổng các góc tam giác','三角形の角'],['polygon','Góc của tứ giác và đa giác','多角形の角']]),
 chapter(5,'integer','Tính chất số nguyên','整数の性質',[['even','Số chẵn và số lẻ','偶数と奇数'],['multiple','Bội và bội chung','倍数・公倍数'],['divisor','Ước và ước chung','約数・公約数']]),
@@ -21,6 +22,7 @@ chapter(6,'volume6','Thể tích lăng trụ và hình trụ','角柱と円柱�
 chapter(6,'proportion','Tỉ lệ thuận và tỉ lệ nghịch','比例と反比例',[['proportion','Tỉ lệ thuận và bảng số','比例'],['proportion-graph','Đồ thị tỉ lệ thuận','比例のグラフ'],['inverse','Tỉ lệ nghịch','反比例']]),
 chapter(6,'data','Dữ liệu và khả năng xảy ra','データの調べ方',[['data','Trung bình, trung vị, mốt','代表値'],['frequency','Bảng tần số và biểu đồ','度数分布'],['combinations','Liệt kê không bỏ sót','場合の数']]),
 chapter(6,'finish','Hành trang lên cấp hai','算数のまとめ',[['final-number','Ôn số và phép tính','数と計算'],['final-shape','Ôn hình học và đo lường','図形と測定'],['final-word','Bài toán tổng hợp','総合問題']])];
+export const chapters=alignTextbook(draftChapters);
 export const lessons=chapters.flatMap(c=>c.lessons.map(l=>({...l,grade:c.grade,chapter:c.title})));
 export const teaching={
 'place':['Nhân với 10, 100 làm mỗi chữ số có giá trị gấp 10, 100 lần.','Số × 10; số × 100','Hãy nhìn giá trị của từng hàng, không chỉ đếm chữ số.'],
