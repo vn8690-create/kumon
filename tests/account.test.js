@@ -1,0 +1,24 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';
+test('account data stays separate from guest; stale cloud write keeps local work',async()=>{
+ const elements=new Map(),listeners={},storage=new Map();
+ const guest={version:1,grade:6,stats:{},history:[],profile:{nickname:'Guest child'},session:null};
+ const own={version:1,grade:5,stats:{},history:[],profile:{nickname:'Account child'},session:null};
+ storage.set('math-garden-v1',JSON.stringify(guest));
+ const el=id=>{if(!elements.has(id))elements.set(id,{textContent:'',innerHTML:'',classList:{toggle(){}}});return elements.get(id);};
+ globalThis.document={querySelector:el,querySelectorAll:()=>[],addEventListener:(k,f)=>(listeners[k]??=[]).push(f)};
+ globalThis.window={scrollTo(){},addEventListener(){}};globalThis.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};globalThis.confirm=()=>true;
+ let writes=0;
+ globalThis.mockCloud={configured:true,client:{},user:{id:'test-owner',email:'test@example.com'},recovery:false,initError:'',initCloud:async()=>{},friendly:()=>'',fetchProgress:async()=>({payload:own,revision:4}),pushProgress:async(payload,revision)=>{assert.equal(revision,4);assert.equal(payload.profile.nickname,'Account child');writes++;throw Error('sync_conflict');}};
+ let code=await fs.readFile(new URL('../app.js',import.meta.url),'utf8');
+ code=code.replace(/import \{configured[^\n]+from '\.\/cloud.js';/, 'const {configured,client,user,recovery,initError,initCloud,friendly,fetchProgress,pushProgress}=globalThis.mockCloud;');
+ code=code.replace(/from '(\.\/[^']+)'/g,(_,p)=>`from '${new URL('../'+p,import.meta.url).href}'`);
+ await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+ assert.match(el('#app').innerHTML,/Account child/);assert.doesNotMatch(el('#app').innerHTML,/Guest child/);
+ const click=async dataset=>{for(const fn of listeners.click||[])await fn({target:{closest:()=>({dataset})}});};
+ await click({action:'start:triangle'});await click({action:'reveal'});await click({action:'correct'});
+ await new Promise(r=>setTimeout(r,900));assert.equal(writes,1);
+ assert.equal(storage.get('math-garden-v1'),JSON.stringify(guest));
+ assert.equal(JSON.parse(storage.get('math-garden-user-test-owner')).stats.triangle.attempts,1);
+ assert.equal(JSON.parse(storage.get('math-garden-user-test-owner-sync')).dirty,true);
+ await click({view:'account'});assert.match(el('#app').innerHTML,/Cần kiểm tra tiến độ/);
+});

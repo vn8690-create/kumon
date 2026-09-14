@@ -2,7 +2,15 @@
 
 Ứng dụng web tĩnh giúp trẻ ôn toán lớp 5 và chuẩn bị lớp 6. Tên repo `kumon` do chủ repo chọn; ứng dụng độc lập, không liên kết với KUMON.
 
-## Bản đầu
+## Bản 2: tài khoản và giao diện gia đình
+
+- Dashboard mới: mục tiêu ngày, hoạt động 7 ngày, tiến độ và gợi ý ôn.
+- Hồ sơ bé: biệt danh, avatar, lớp, mục tiêu. Nhật ký mở lại từng câu đã học.
+- Đã viết đăng ký/đăng nhập email, xác nhận email, quên/đổi mật khẩu qua Supabase.
+- Đồng bộ riêng theo tài khoản, RLS và kiểm tra phiên bản chống ghi đè giữa thiết bị.
+- **Cần kích hoạt Supabase**: xem [hướng dẫn tài khoản](docs/ACCOUNTS.md). Hiện app vẫn dùng chế độ lưu trên thiết bị; không tuyên bố cloud hoạt động khi cấu hình còn trống.
+
+## Nền tảng bài học
 
 - Mục lục chương → bài nhỏ cho lớp 5–6; mục chưa viết được ghi rõ **Đang biên soạn**.
 - Tên bài Nhật–Việt, lý thuyết và lời giải hiện bằng tiếng Việt.
@@ -10,7 +18,7 @@
 - Sinh đề có quy tắc, không gọi AI, không cần API key hoặc backend.
 - Làm ra giấy hoặc ghi chú, mở lời giải, tự đánh giá đúng/sai.
 - Mỗi 5 câu tổng kết; ưu tiên dạng sai, giảm mức khi sai; 2 câu đúng liên tiếp gỡ khỏi ôn tập.
-- Tiến độ và lượt đang làm lưu localStorage; xuất/nhập JSON. Không đồng bộ tài khoản.
+- Tiến độ và lượt đang làm lưu localStorage; xuất/nhập JSON. Có tích hợp đồng bộ tài khoản khi Supabase được cấu hình.
 
 ## Chạy thử
 
