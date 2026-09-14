@@ -6,7 +6,7 @@ test('account data stays separate from guest; stale cloud write keeps local work
  storage.set('math-garden-v1',JSON.stringify(guest));
  const el=id=>{if(!elements.has(id))elements.set(id,{textContent:'',innerHTML:'',classList:{toggle(){}}});return elements.get(id);};
  globalThis.document={querySelector:el,querySelectorAll:()=>[],addEventListener:(k,f)=>(listeners[k]??=[]).push(f)};
- globalThis.window={scrollTo(){},addEventListener(){}};globalThis.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};globalThis.confirm=()=>true;
+ globalThis.window={scrollTo(){},addEventListener(){}};globalThis.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};globalThis.confirm=()=>true;storage.set('math-garden-language','vi');
  let writes=0;
  globalThis.mockCloud={configured:true,client:{},user:{id:'test-owner',email:'test@example.com'},recovery:false,initError:'',initCloud:async()=>{},friendly:()=>'',fetchProgress:async()=>({payload:own,revision:4}),pushProgress:async(payload,revision)=>{assert.equal(revision,4);assert.equal(payload.profile.nickname,'Account child');writes++;throw Error('sync_conflict');}};
  let code=await fs.readFile(new URL('../app.js',import.meta.url),'utf8');

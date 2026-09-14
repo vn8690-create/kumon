@@ -13,8 +13,8 @@
 ## Nền tảng bài học
 
 - Mục lục chương → bài nhỏ cho lớp 5–6; mục chưa viết được ghi rõ **Đang biên soạn**.
-- Tên bài Nhật–Việt, lý thuyết và lời giải hiện bằng tiếng Việt.
-- Công thức, ví dụ, hình minh họa cho chữ nhật, bình hành, tam giác, hình chữ L.
+- 25 bài đang mở có lý thuyết, đề và lời giải Nhật–Việt. Nút chọn ngôn ngữ trên đầu trang; mặc định tiếng Nhật. Một số trang quản lý và thông báo tài khoản vẫn bằng tiếng Việt.
+- Hình SVG kèm số đo cho 13 dạng hình học, diện tích, chu vi và thể tích; đường cao nét đứt. Hình được tạo từ số đo câu hỏi. Góc và hình không gian là hình minh họa, không dùng để đo trực tiếp.
 - Sinh đề có quy tắc, không gọi AI, không cần API key hoặc backend.
 - Làm ra giấy hoặc ghi chú, mở lời giải, tự đánh giá đúng/sai.
 - Mỗi 5 câu tổng kết; ưu tiên dạng sai, giảm mức khi sai; 2 câu đúng liên tiếp gỡ khỏi ôn tập.

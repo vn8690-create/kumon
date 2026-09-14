@@ -8,7 +8,7 @@ test('guest profile, round history, account configuration state and navigation',
  globalThis.document={querySelector:el,querySelectorAll:()=>[],addEventListener:(type,fn)=>(listeners[type]??=[]).push(fn)};
  globalThis.window={scrollTo(){},addEventListener(){}};
  globalThis.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};
- globalThis.confirm=()=>true;
+ globalThis.confirm=()=>true;storage.set('math-garden-language','vi');
  let code=await fs.readFile(new URL('../app.js',import.meta.url),'utf8');
  code=code.replace(/import \{configured[^\n]+from '\.\/cloud.js';/, "const configured=false,client=null,user=null,recovery=false,initError='',initCloud=async()=>{},friendly=()=>'',fetchProgress=async()=>null,pushProgress=async()=>{};");
  code=code.replace(/from '(\.\/[^']+)'/g,(_,p)=>`from '${new URL('../'+p,import.meta.url).href}'`);
@@ -22,4 +22,12 @@ test('guest profile, round history, account configuration state and navigation',
  assert.match(el('#app').innerHTML,/4 \/ 5 câu đúng/);
  const state=JSON.parse(storage.get('math-garden-v1'));assert.equal(state.history.length,1);assert.equal(state.history[0].results.length,5);assert(state.history[0].results[0].prompt);assert(state.history[0].id);
  await click({view:'progress'});assert.match(el('#app').innerHTML,/Nhật ký luyện tập/);assert.match(el('#app').innerHTML,/Tam giác/);
+ await click({action:'start:triangle'});
+ for(const fn of listeners.change||[])await fn({target:{id:'language',value:'ja'}});
+ assert.match(el('#app').innerHTML,/やってみよう/);assert.match(el('#app').innerHTML,/三角形/);
+ assert.doesNotMatch(el('#app').innerHTML,/Tính diện tích/);
+ assert.equal(JSON.parse(storage.get('math-garden-v1')).session.results.length,0);
+ await click({action:'reveal'});assert.match(el('#app').innerHTML,/底辺/);
+ for(const fn of listeners.change||[])await fn({target:{id:'language',value:'vi'}});
+ assert.match(el('#app').innerHTML,/Thử sức nào/);
 });
