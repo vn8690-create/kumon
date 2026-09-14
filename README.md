@@ -8,7 +8,7 @@
 - Hồ sơ bé: biệt danh, avatar, lớp, mục tiêu. Nhật ký mở lại từng câu đã học.
 - Đã viết đăng ký/đăng nhập email, xác nhận email, quên/đổi mật khẩu qua Supabase.
 - Đồng bộ riêng theo tài khoản, RLS và kiểm tra phiên bản chống ghi đè giữa thiết bị.
-- **Cần kích hoạt Supabase**: xem [hướng dẫn tài khoản](docs/ACCOUNTS.md). Hiện app vẫn dùng chế độ lưu trên thiết bị; không tuyên bố cloud hoạt động khi cấu hình còn trống.
+- **Đã nối dự án Supabase và tạo bảng**: xem [hướng dẫn tài khoản](docs/ACCOUNTS.md). Còn xác nhận URL chuyển hướng và cấu hình gửi email trước khi mở đăng ký rộng rãi.
 
 ## Nền tảng bài học
 

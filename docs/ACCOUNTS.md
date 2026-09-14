@@ -2,7 +2,7 @@
 
 ## Trạng thái bản triển khai
 
-Giao diện và mã tích hợp đã có. `config.js` để trống nên đăng ký/đăng nhập bị vô hiệu hóa với thông báo rõ ràng. Cần một dự án Supabase để kích hoạt. Không có tài khoản giả hay mật khẩu lưu trong localStorage của ứng dụng.
+Đã cấu hình Project URL và publishable key trong `config.js` cho dự án kbtrpdvoaxceswkmwojw. Bảng learning_progress và hàm lưu đã được áp dụng. Đã kiểm tra SQL bằng transaction rollback: chủ sở hữu đọc/ghi được, người khác không đọc/ghi được, khách không có quyền, phiên bản cũ bị từ chối. URL Configuration và SMTP chưa được xác minh/cấu hình vì kết nối hiện không có công cụ sửa Auth settings. Không có tài khoản giả hay mật khẩu lưu trong localStorage của ứng dụng.
 
 ## Thiết lập
 
@@ -30,7 +30,7 @@ Giao diện và mã tích hợp đã có. `config.js` để trống nên đăng 
 
 `npm test`: phép tính, chọn bài ôn, cửa sổ ngày Nhật, điều hướng và luồng 5 câu với DOM adapter, tách khách/tài khoản, xử lý xung đột đồng bộ với cloud giả lập.
 
-Chưa xác minh giao diện bằng trình duyệt thật trong môi trường này (không có browser executable). Chưa kiểm tra email, SDK CDN, RLS và đồng bộ với dự án Supabase thật vì chưa được kết nối.
+Chưa xác minh giao diện bằng trình duyệt thật trong môi trường này (không có browser executable). Chưa kiểm tra email, SDK CDN và đồng bộ đầu cuối trên trình duyệt. RLS và ghi dữ liệu đã được kiểm tra trực tiếp bằng SQL với hai danh tính thử trong transaction đã rollback.
 
 ## Tài liệu nhà cung cấp
 

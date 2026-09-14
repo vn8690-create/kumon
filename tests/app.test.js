@@ -1,3 +1,4 @@
+import fs from 'node:fs/promises';
 import test from 'node:test';import assert from 'node:assert/strict';
 // DOM adapter tests exercise the real app module and its event handlers.
 // These are not a substitute for visual browser tests or live Supabase tests.
@@ -8,7 +9,10 @@ test('guest profile, round history, account configuration state and navigation',
  globalThis.window={scrollTo(){},addEventListener(){}};
  globalThis.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};
  globalThis.confirm=()=>true;
- await import('../app.js');
+ let code=await fs.readFile(new URL('../app.js',import.meta.url),'utf8');
+ code=code.replace(/import \{configured[^\n]+from '\.\/cloud.js';/, "const configured=false,client=null,user=null,recovery=false,initError='',initCloud=async()=>{},friendly=()=>'',fetchProgress=async()=>null,pushProgress=async()=>{};");
+ code=code.replace(/from '(\.\/[^']+)'/g,(_,p)=>`from '${new URL('../'+p,import.meta.url).href}'`);
+ await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
  const click=async(dataset)=>{const b={dataset};for(const fn of listeners.click||[])await fn({target:{closest:()=>b}});};
  assert.match(el('#app').innerHTML,/Nhịp học 7 ngày/);
  await click({action:'profile'});assert.match(el('#app').innerHTML,/profile-form/);
