@@ -49,4 +49,4 @@ Node 20+; không cần cài gói npm. Kiểm tra các dạng bài, tính toán h
 - `app.js`: giao diện và tiến độ.
 - `docs/CURRICULUM.md`: toàn bộ khung bài học và nguyên tắc biên soạn.
 
-Khung đã đối chiếu với bốn tài liệu kế hoạch Tokyo Shoseki 2024 do phụ huynh cung cấp: 18 chương chính lớp 5, 13 chương chính lớp 6, một mục ôn lớp 5; tổng 88 bài nhỏ. Hiện 25 bài có thể luyện. Các mục mới đang biên soạn. Chưa phải bộ giáo trình hoàn chỉnh. Các mức hiện thay đổi chủ yếu phạm vi số; cần bổ sung bài vận dụng và nhận dạng khái niệm ở giai đoạn tiếp theo.
+Khung đã đối chiếu với bốn tài liệu kế hoạch Tokyo Shoseki 2024 do phụ huynh cung cấp: 18 chương chính lớp 5, 13 chương chính lớp 6, một mục ôn lớp 5; tổng 88 bài nhỏ. Hiện 49 bài có thể luyện; có lựa chọn chương đang học ở trường và bài thể tích khối ghép có hình vẽ. Các mục mới đang biên soạn. Chưa phải bộ giáo trình hoàn chỉnh. Các mức hiện thay đổi chủ yếu phạm vi số; cần bổ sung bài vận dụng và nhận dạng khái niệm ở giai đoạn tiếp theo.

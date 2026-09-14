@@ -1,7 +1,9 @@
+import {generateSupplement} from './supplement.js';
 export const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
 export const fraction=(n,d)=>{const g=gcd(n,d);return d/g===1?String(n/g):`${n/g}/${d/g}`};
 export const fmt=n=>String(Math.round(n*10000)/10000).replace('.',',');
 export function generate(id,level=1,rng=Math.random){
+ const extra=generateSupplement(id,level,rng);if(extra)return extra;
  const ri=(lo,hi)=>lo+Math.floor(rng()*(hi-lo+1));const a=ri(2,level===1?7:level===2?12:20),b=ri(2,9),c=ri(2,6);let prompt,answer,steps,unit='',figure=null;
  const set=(p,n,s,u='')=>{prompt=p;answer=typeof n==='number'?fmt(n):n;steps=s;unit=u};
  switch(id){

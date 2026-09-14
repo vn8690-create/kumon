@@ -1,3 +1,4 @@
+import {extraTeaching} from './supplement.js';
 import {alignTextbook} from './textbook.js';
 // Original lesson content. Sequence is adaptable to the child's textbook.
 const chapter=(grade,id,title,jp,items)=>({grade,id,title,jp,lessons:items.map(([key,title,jp])=>({id:key,title,jp}))});
@@ -25,6 +26,7 @@ chapter(6,'finish','Hành trang lên cấp hai','算数のまとめ',[['final-nu
 export const chapters=alignTextbook(draftChapters);
 export const lessons=chapters.flatMap(c=>c.lessons.map(l=>({...l,grade:c.grade,chapter:c.title})));
 export const teaching={
+...extraTeaching,
 'place':['Nhân với 10, 100 làm mỗi chữ số có giá trị gấp 10, 100 lần.','Số × 10; số × 100','Hãy nhìn giá trị của từng hàng, không chỉ đếm chữ số.'],
 'decimal-mul':['Nhân như số nguyên rồi đặt dấu phẩy theo tổng số chữ số thập phân.','1,2 × 0,3 = 0,36','Ước lượng trước: nhân với số nhỏ hơn 1 thì kết quả nhỏ đi.'],
 'decimal-div':['Nhân cả số bị chia và số chia với cùng 10 hoặc 100 để số chia thành số nguyên.','3,6 ÷ 0,4 = 36 ÷ 4 = 9','Phải dịch dấu phẩy ở cả hai số.'],

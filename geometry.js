@@ -24,6 +24,11 @@ export function geometrySVG(q,lang='vi'){
  case 'volume-box':case 'volume-cube':case 'prism':{const x=95,y=95,w=175,h=125,dx=45,dy=-45;body=poly([[x,y],[x+w,y],[x+w,y+h],[x,y+h]])+poly([[x,y],[x+dx,y+dy],[x+w+dx,y+dy],[x+w,y]])+poly([[x+w,y],[x+w+dx,y+dy],[x+w+dx,y+h+dy],[x+w,y+h]]);
  if(q.id==='prism')body+=text(180,150,`${a} cm²`)+text(345,150,`${b} cm`);else body+=text(180,246,`${a} cm`)+text(319,219,`${q.id==='volume-cube'?a:b} cm`)+text(58,158,`${q.id==='volume-cube'?a:c} cm`);
  caption=lang==='ja'?'立体の模式図です。表示された数値を使います。':'Hình không gian minh họa. Sử dụng số đo ghi trên hình.';break;}
+ case 'volume-composite':{const f=q.figure;if(!f)return '';const {width,depth,lower,upper,total}=f;
+ const x=80,y=230,w=215,h=145,u=100,lo=70,dx=40,dy=-30;
+ body=poly([[x,y-h],[x+dx,y-h+dy],[x+u+dx,y-h+dy],[x+u,y-h]])+poly([[x+u,y-lo],[x+u+dx,y-lo+dy],[x+w+dx,y-lo+dy],[x+w,y-lo]])+poly([[x+u,y-h],[x+u+dx,y-h+dy],[x+u+dx,y-lo+dy],[x+u,y-lo]])+poly([[x+w,y],[x+w+dx,y+dy],[x+w+dx,y-lo+dy],[x+w,y-lo]])+poly([[x,y],[x,y-h],[x+u,y-h],[x+u,y-lo],[x+w,y-lo],[x+w,y]]);
+ body+=line(x,y-lo,x+u,y-lo,true)+text(x+w/2,258,`${width} cm`)+text(44,y-h/2,`${total} cm`)+text(x+u/2,y-h-15,`${upper} cm`)+text(367,y-lo/2,`${lower} cm`)+text(x+w+35,y+11,`${depth} cm`);
+ caption=lang==='ja'?'破線で上下に分けられます。図は正確な縮尺ではありません。':'Nét đứt chia phần trên và dưới. Hình minh họa không theo tỉ lệ.';break;}
  case 'cylinder':body=`<path d="M120 85V210A80 25 0 0 0 280 210V85" class="shape-fill"/><ellipse cx="200" cy="85" rx="80" ry="25" class="shape-fill"/>`+line(200,85,280,85,true)+text(235,74,`${a} cm`)+line(305,85,305,210)+text(338,150,`${b} cm`);caption=lang==='ja'?'円柱の模式図です。円周率は3.14とします。':'Hình trụ minh họa. Dùng π = 3,14.';break;
  default:return '';
  }

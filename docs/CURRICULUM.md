@@ -13,8 +13,8 @@ Trang trong bảng là trang sách giáo khoa được chỉ ra trong tài liệ
 Sách: 上 p.8–15; 5 tiết.
 
 - Giá trị hàng và dịch dấu phẩy (位取り) — Có thể học
-- Đếm theo đơn vị 0,001 (0.001をもとにした数) — Đang biên soạn
-- Chia cho 10 và 100 (10分の1、100分の1) — Đang biên soạn
+- Đếm theo đơn vị 0,001 (0.001をもとにした数) — Có thể học
+- Chia cho 10 và 100 (10分の1、100分の1) — Có thể học
 
 ### 2. Thể tích hình hộp và lập phương · 直方体や立方体の体積
 
@@ -22,23 +22,23 @@ Sách: 上 p.16–31; 8 tiết.
 
 - Hình hộp chữ nhật (直方体) — Có thể học
 - Hình lập phương (立方体) — Có thể học
-- Thể tích hình ghép (組み合わせた立体の体積) — Đang biên soạn
-- Đổi đơn vị thể tích (体積の単位) — Đang biên soạn
+- Thể tích hình ghép (組み合わせた立体の体積) — Có thể học
+- Đổi đơn vị thể tích (体積の単位) — Có thể học
 
 ### 3. Tỉ lệ: bước đầu · 比例
 
 Sách: 上 p.32–38; 4 tiết.
 
-- Bảng biến thiên và quan hệ tỉ lệ (比例の準備) — Đang biên soạn
-- Điền bảng tỉ lệ (比例の表) — Đang biên soạn
+- Bảng biến thiên và quan hệ tỉ lệ (比例の準備) — Có thể học
+- Điền bảng tỉ lệ (比例の表) — Có thể học
 
 ### 4. Nhân số thập phân · 小数のかけ算
 
 Sách: 上 p.40–51; 9 tiết.
 
 - Nhân số thập phân (小数のかけ算) — Có thể học
-- Tích lớn hơn hay nhỏ hơn? (積の大きさ) — Đang biên soạn
-- Tính chất phép nhân thập phân (小数の計算のきまり) — Đang biên soạn
+- Tích lớn hơn hay nhỏ hơn? (積の大きさ) — Có thể học
+- Tính chất phép nhân thập phân (小数の計算のきまり) — Có thể học
 
 ### 5. Chia số thập phân · 小数のわり算
 
@@ -47,7 +47,7 @@ Sách: 上 p.52–63; 9 tiết.
 - Chia số thập phân (小数のわり算) — Có thể học
 - Làm tròn thương (商の概数) — Đang biên soạn
 - Số dư trong phép chia thập phân (小数のわり算の余り) — Đang biên soạn
-- Gấp một số lần thập phân (小数の倍) — Đang biên soạn · 上 p.64–69
+- Gấp một số lần thập phân (小数の倍) — Có thể học · 上 p.64–69
 
 ### 6. Hai hình bằng nhau · 合同な図形
 
@@ -67,23 +67,23 @@ Sách: 上 p.84–93; 6 tiết.
 
 Sách: 上 p.94–107; 12 tiết.
 
-- Số chẵn và số lẻ (偶数と奇数) — Đang biên soạn
-- Bội và bội chung (倍数・公倍数) — Đang biên soạn
-- Ước và ước chung (約数・公約数) — Đang biên soạn
+- Số chẵn và số lẻ (偶数と奇数) — Có thể học
+- Bội và bội chung (倍数・公倍数) — Có thể học
+- Ước và ước chung (約数・公約数) — Có thể học
 
 ### 9. Phân số, thập phân và số nguyên · 分数と小数、整数の関係
 
 Sách: 上 p.108–117; 6 tiết.
 
-- Phân số và phép chia (分数とわり算) — Đang biên soạn
-- Đổi giữa phân số và thập phân (分数と小数の関係) — Đang biên soạn
+- Phân số và phép chia (分数とわり算) — Có thể học
+- Đổi giữa phân số và thập phân (分数と小数の関係) — Có thể học
 
 ### 10. Cộng và trừ phân số · 分数のたし算とひき算
 
 Sách: 下 p.2–17; 10 tiết.
 
 - Rút gọn phân số (約分) — Có thể học
-- Quy đồng mẫu số (通分) — Đang biên soạn
+- Quy đồng mẫu số (通分) — Có thể học
 - Cộng phân số khác mẫu (分数のたし算) — Có thể học
 - Trừ phân số khác mẫu (分数のひき算) — Có thể học
 - Cộng trừ phân số và thập phân (分数と小数の混じったたし算・ひき算) — Đang biên soạn
@@ -94,15 +94,15 @@ Sách: 下 p.2–17; 10 tiết.
 Sách: 下 p.18–25; 6 tiết.
 
 - Tìm số trung bình (平均) — Có thể học
-- Tìm tổng từ trung bình (平均から全体を求める) — Đang biên soạn
+- Tìm tổng từ trung bình (平均から全体を求める) — Có thể học
 
 ### 12. Lượng trên một đơn vị · 単位量あたりの大きさ
 
 Sách: 下 p.26–41; 10 tiết.
 
-- So sánh theo một đơn vị (単位量あたりの大きさ) — Đang biên soạn
+- So sánh theo một đơn vị (単位量あたりの大きさ) — Có thể học
 - Mật độ dân số (人口密度) — Đang biên soạn
-- Quãng đường, thời gian, vận tốc (速さ) — Đang biên soạn
+- Quãng đường, thời gian, vận tốc (速さ) — Có thể học
 
 ### 13. Diện tích tứ giác và tam giác · 四角形と三角形の面積
 
@@ -122,9 +122,9 @@ Sách: 下 p.42–62; 11 tiết.
 
 Sách: 下 p.64–80; 10 tiết.
 
-- Tìm tỉ lệ và phần trăm (割合を求める) — Đang biên soạn
+- Tìm tỉ lệ và phần trăm (割合を求める) — Có thể học
 - Tính phần trăm của một lượng (百分率) — Có thể học
-- Tìm lượng ban đầu (もとにする量) — Đang biên soạn
+- Tìm lượng ban đầu (もとにする量) — Có thể học
 
 ### 15. Biểu đồ băng và hình quạt · 帯グラフと円グラフ
 
@@ -178,10 +178,10 @@ Sách:  p.24–31; 5 tiết.
 
 Sách:  p.32–49; 13 tiết.
 
-- Phân số nhân số nguyên (分数×整数) — Đang biên soạn
-- Phân số chia số nguyên (分数÷整数) — Đang biên soạn
+- Phân số nhân số nguyên (分数×整数) — Có thể học
+- Phân số chia số nguyên (分数÷整数) — Có thể học
 - Nhân hai phân số (分数のかけ算) — Có thể học
-- Phân số nghịch đảo (逆数) — Đang biên soạn
+- Phân số nghịch đảo (逆数) — Có thể học
 
 ### 4. Chia phân số cho phân số · 分数÷分数
 
@@ -195,7 +195,7 @@ Sách:  p.50–65; 7 tiết.
 
 Sách:  p.72–84; 8 tiết.
 
-- Rút gọn tỉ số (比の値・等しい比) — Đang biên soạn
+- Rút gọn tỉ số (比の値・等しい比) — Có thể học
 - Chia một lượng theo tỉ số (比の利用) — Có thể học
 
 ### 6. Phóng to và thu nhỏ · 拡大図と縮図
@@ -265,3 +265,11 @@ Sách:  p.196–219; 19 tiết.
 - Diện tích lớp 5: tách chiều cao nằm ngoài hình bình hành, ngoài tam giác và quan hệ chiều cao–diện tích. Các mục mới là kế hoạch, chưa có bộ sinh đề.
 - 25 bài đang hoạt động được giữ nguyên ID; tiến độ cũ không bị xóa hoặc gán sang bài khác.
 - Chưa hoàn thành toàn bộ nội dung các chương. Cần tiếp tục biên soạn ví dụ và dạng luyện cho các mục đang chuẩn bị.
+
+## Học theo tiến độ trường
+
+Trong mục lục, chọn “Trường đang học chương này” để ưu tiên chương đó trên trang chủ. Có thể trở về lộ trình toàn bộ. Gợi ý ưu tiên bài cần ôn, rồi bài chưa đủ 5 lần tự đánh giá hoặc chưa đúng liên tiếp 2 câu. Đây là gợi ý luyện tập, không phải chứng nhận thành thạo.
+
+Nguồn tham khảo: [kế hoạch Tokyo Shoseki](https://ten.tokyo-shoseki.co.jp/text/shou/sansu/keikaku/), [danh mục dạng bài Sukiruma lớp 5](https://sukiruma.net/work-san5nen/). Không sao chép phiếu bài tập. Khi phụ huynh gửi print rõ nét, đối chiếu lớp/chương/kỹ năng, bổ sung bài độc lập cùng mục tiêu, kiểm tra đáp án và hình vẽ trước khi phát hành. Chưa nhận kế hoạch riêng của trường.
+
+Hiện có 49 bài luyện hoạt động; các bài còn lại giữ nhãn Đang biên soạn. Mỗi bài mới có một dạng nền tảng sinh số; chưa bao phủ toàn bộ biến thể trong sách.

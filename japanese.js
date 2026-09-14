@@ -1,6 +1,8 @@
+import {extraTeachingJa} from './supplement.js';
 const num=n=>String(Math.round(n*10000)/10000);
 const dec=s=>String(s).replace(/(\d),(\d)/g,'$1.$2');
 export const teachingJa={
+...extraTeachingJa,
 place:['10倍、100倍すると、それぞれの数字の位が上がります。','数 × 10、数 × 100','100倍すると、小数点は右に2けた分移ります。'],
 'decimal-mul':['整数と同じようにかけてから、小数点の位置を決めます。','1.2 × 0.3 = 0.36','小数点より右のけた数を、2つの数で合わせます。'],
 'decimal-div':['わられる数とわる数を同じ数だけ10倍して、わる数を整数にします。','3.6 ÷ 0.4 = 36 ÷ 4 = 9','両方の数を同じように変えましょう。'],
@@ -27,6 +29,7 @@ expression:['文字に指定された数をあてはめて計算します。','x
 prism:['底面と同じ形の層が、高さの分だけ重なっていると考えます。','角柱の体積 = 底面積 × 高さ','底面積の単位はcm²、体積の単位はcm³です。'],
 cylinder:['円柱の底面は円です。底面積を求めてから高さをかけます。','円柱の体積 = 半径 × 半径 × 3.14 × 高さ','高さは2つの底面の間の垂直な長さです。']};
 export function japaneseQuestion(q){
+ if(q.ja)return {...q,...q.ja,originalPrompt:q.prompt};
  const v=dec(q.prompt),ns=(v.match(/\d+(?:\.\d+)?/g)||[]).map(Number),[a,b,c,d]=ns;let prompt,steps;let answer=dec(q.answer),unit=({trang:'ページ',viên:'個'})[q.unit]||q.unit;
  switch(q.id){
  case 'place':prompt=`計算しましょう。 ${v}`;steps=['100倍すると、小数点が右に2けた分移ります。',`${a} × 100 = ${answer}`];break;
